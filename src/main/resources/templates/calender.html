@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>Household Account Book</title>
+  <meta charset="utf-8" />
+  <link th:href="@{/css/calender.css}" rel="stylesheet">
+  	
+<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+</head>
+
+<body>
+<h1 class="title">Household Account Book</h1>
+<div class="wrapper">
+
+  <div class="calendar-container">
+    <h1>February <span th:text="${#calendars.format(#calendars.createNowForTimeZone('GMT+0900'), 'yyyy')}"></span></h1>
+    <table class="calendar">
+      <tr>
+        <th>SUN</th>
+        <th>MON</th>
+        <th>TUE</th>
+        <th>WED</th>
+        <th>THU</th>
+        <th>FRI</th>
+        <th>SAT</th>
+      </tr>
+      <tr class="day">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr class="day">
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+      </tr>
+      <tr class="day">
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+      </tr>
+      <tr class="day">
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+        <td>21</td>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+      </tr>
+      <tr class="day">
+        <td>25</td>
+        <td>26</td>
+        <td>27</td>
+        <td>28</td>
+        <td>29</td>
+        <td>30</td>
+        <td>31</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="input-container">
+    <form action="expenditure" method="POST">
+      <h1>支出入力</h1>
+      <table id="edit_table" class="table_center">
+        <tr>
+          <th><label>項目名</label></th>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" name="name" placeholder="">
+          </td>
+        </tr>
+        <tr>
+          <th><label>金額</label></th>
+        </tr>
+        <tr>
+          <td><input type="number" name="amount" placeholder=""></td>
+        </tr>
+
+        <tr>
+          <th><label>カテゴリー</label></th>
+        </tr>
+        <tr>
+          <td><input type="number" name="material" required></td>
+        </tr>
+
+        <tr>
+          <th><label>支払い方法</label></th>
+        </tr>
+        <tr>
+          <td><input type="number" name="cooking_method" required></td>
+        </tr>
+
+        <tr>
+          <th><label>メモ</label></th>
+        </tr>
+        <tr>
+          <td><input type="text" name="memo"></td>
+        </tr>
+
+        <tr>
+          <th><label>病院名</label></th>
+        </tr>
+        <tr>
+          <td><input type="text" name="hospital_name"></td>
+        </tr>
+
+
+        <!-- <tr>
+          <th><label>・カテゴリー</label></th>
+        </tr>
+        <tr>
+          <td><select name="category_id">
+              <option th:each="search: ${session.category_list}" th:value="${search.category_id}"
+                th:text="${search.category_name}"></option>
+            </select></td>
+        </tr> -->
+        
+      </table>
+      <div>
+
+        <br>
+        <button type="submit">入力する</button>
+      </div>
+      
+    </form>
+
+    
+
+  </div>
+</div>
+
+</body>
+
+</html>

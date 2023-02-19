@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>家計簿アプリ</title>
+    <meta charset="utf-8" />
+    <link th:href="@{/css/main.css}" rel="stylesheet">
+  </head>
+  <body>
+    <h1>2023年家計money.html</h1>
+
+    <ul>
+      <li><a class="active">cookped</a></li>
+      <li>
+        <form action="/recipe" method="POST">
+          <input type="text" name="recipe" placeholder="検索">
+          <button type="submit" class="">検索</button>
+        </form>
+      </li>
+      <th:block th:if="${session.user_info} != null">
+        <li><a class="right" href="/RegistView">レシピを投稿する</a></li>
+        <li><a class="right" href="/MaypageView">マイページ</a></li>
+      </th:block>
+      <th:block th:if="${session.user_info} == null">
+        <li><a class="right" href="/LoginView">ログイン</a></li>
+        <li><a class="right" href="/RegistUserView">ユーザー登録</a></li>
+      </th:block>
+      <div class="right">
+        <a class="right" href="/">トップへ</a>
+      </div>
+    </ul>
+    
+  </body>
+</html>
