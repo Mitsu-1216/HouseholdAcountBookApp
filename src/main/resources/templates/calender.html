@@ -74,7 +74,7 @@
   </div>
 
   <div class="input-container">
-    <form action="expenditure" method="POST">
+    <form action="/expense" method="POST">
       <h1>支出入力</h1>
       <table id="edit_table" class="table_center">
         <tr>
@@ -85,6 +85,11 @@
             <input type="text" name="name" placeholder="">
           </td>
         </tr>
+        <th><label>カテゴリー</label></th>
+      </tr>
+      <tr>
+        <td><input type="number" name="category"></td>
+      </tr>
         <tr>
           <th><label>金額</label></th>
         </tr>
@@ -93,17 +98,11 @@
         </tr>
 
         <tr>
-          <th><label>カテゴリー</label></th>
-        </tr>
-        <tr>
-          <td><input type="number" name="material" required></td>
-        </tr>
-
-        <tr>
+           <tr>
           <th><label>支払い方法</label></th>
         </tr>
         <tr>
-          <td><input type="number" name="cooking_method" required></td>
+          <td><input type="number" name="payment"></td>
         </tr>
 
         <tr>
@@ -117,7 +116,7 @@
           <th><label>病院名</label></th>
         </tr>
         <tr>
-          <td><input type="text" name="hospital_name"></td>
+          <td><input type="number" name="hospital"></td>
         </tr>
 
 

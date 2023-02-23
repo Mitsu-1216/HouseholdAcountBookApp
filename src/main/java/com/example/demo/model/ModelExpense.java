@@ -6,7 +6,10 @@ import lombok.Data;
 
 @Data
 public class ModelExpense {
+
     private int detail_no;
+
+    private String name;
 
     private int category_id;
 
@@ -14,7 +17,7 @@ public class ModelExpense {
 
     private int payment_id;
 
-    private Date purchase_date;
+    // private Date purchase_date;
 
     private String memo;
 
