@@ -45,14 +45,11 @@ public class MedicalController {
      */
     @PostMapping("/medical")
     public int registerMedical(
-            // hospital_idはauto_increment
-            // @RequestParam("hospital_id") int hospital_id,
             @RequestParam("hospital_name") String hospital_name,
             @RequestParam("transportation_cost") int transportation_cost) {
 
         ModelMedical medical = new ModelMedical();
 
-        // medical.setHospital_id(hospital_id);
         medical.setHospital_name(hospital_name);
         medical.setTransportation_cost(transportation_cost);
 

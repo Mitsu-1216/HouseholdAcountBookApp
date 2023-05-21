@@ -32,11 +32,11 @@ public class MedicalDao implements IMedicalDao {
         param.put("transportation_cost", Integer.toString(medical.getTransportation_cost()));
 
         rm.append("INSERT INTO hospital_table( ");
-        rm.append("hospital_id, ");
+        // rm.append("hospital_id, ");
         rm.append("hospital_name, ");
         rm.append("transportation_cost ");
         rm.append(")VALUES( ");
-        rm.append(":hospital_id, ");
+        // rm.append(":hospital_id, ");
         rm.append(":hospital_name, ");
         rm.append(":transportation_cost ");
         rm.append(" )");
