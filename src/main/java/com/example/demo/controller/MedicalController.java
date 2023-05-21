@@ -38,7 +38,6 @@ public class MedicalController {
     /**
      * medicalを登録
      * 
-     * @param hospital_id
      * @param hospital_name
      * @param transportation_cost
      * @return

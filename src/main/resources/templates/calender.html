@@ -4,6 +4,7 @@
 <head>
   <title>Household Account Book</title>
   <meta charset="utf-8" />
+  <link th:href="@{/css/main.css}" rel="stylesheet">
   <link th:href="@{/css/calender.css}" rel="stylesheet">
   	
 <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
@@ -12,7 +13,7 @@
 <body>
   <div class="header"></div>
 <h1 class="title">Household Account Book</h1>
-<div class="header-menu"><a href="/medical">Medical bills</a></div>
+<button class="medicalbills"><a href="/medical">Medical bills</a></button>
 <div class="wrapper">
 
   <div class="calendar-container">
@@ -136,7 +137,7 @@
       <div>
 
         <br>
-        <button type="submit">入力する</button>
+        <button class="Button-style" type="submit">入力する</button>
       </div>
       
     </form>
